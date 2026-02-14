@@ -1,185 +1,112 @@
-/* Custom styles for the Emotion-Based Music Player Application */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emotion-Based Music Player</title>
 
-:root {
-    --primary-gradient-start: #667eea;
-    --primary-gradient-end: #764ba2;
-    --success-color: #28a745;
-    --danger-color: #dc3545;
-    --warning-color: #ffc107;
-    --info-color: #17a2b8;
-    --light-bg: #f8f9fa;
-    --dark-text: #212529;
-}
-
-body {
-    background-color: var(--light-bg);
-    color: var(--dark-text);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.navbar {
-    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
-}
-
-.card {
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-    border: none;
-    margin-bottom: 20px;
-}
-
-.btn {
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
-    border: none;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-}
-
-.btn-success {
-    background: linear-gradient(135deg, var(--success-color) 0%, #20c997 100%);
-    border: none;
-}
-
-.btn-danger {
-    background: linear-gradient(135deg, var(--danger-color) 0%, #fd7e14 100%);
-    border: none;
-}
-
-.progress {
-    height: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    background: linear-gradient(90deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
-}
-
-.badge {
-    border-radius: 6px;
-    padding: 6px 12px;
-    font-weight: 500;
-}
-
-.emotion-display {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
-    color: white;
-    margin: 10px 0;
-}
-
-.stat-card {
-    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
-    color: white;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.stat-value {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-.stat-label {
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-.upload-section {
-    border: 2px dashed #dee2e6;
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-}
-
-.upload-section:hover {
-    border-color: var(--primary-gradient-start);
-    background-color: #f8f9ff;
-}
-
-.mapping-item {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.table th {
-    background-color: var(--primary-gradient-start);
-    color: white;
-}
-
-.table-hover tbody tr:hover {
-    background-color: rgba(102, 126, 234, 0.05);
-}
-
-.alert {
-    border-radius: 8px;
-    border: none;
-}
-
-.form-control, .form-select {
-    border-radius: 8px;
-    border: 1px solid #ced4da;
-}
-
-.form-control:focus, .form-select:focus {
-    border-color: var(--primary-gradient-start);
-    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .dashboard-container {
-        padding: 10px;
+  <style>
+    :root {
+      --primary-gradient-start: #667eea;
+      --primary-gradient-end: #764ba2;
+      --success-color: #28a745;
+      --danger-color: #dc3545;
+      --warning-color: #ffc107;
+      --info-color: #17a2b8;
+      --light-bg: #f8f9fa;
+      --dark-text: #212529;
     }
-    
-    .sidebar {
-        margin-top: 20px;
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
     }
-}
 
-/* Notification styles */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    min-width: 300px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-/* Footer */
-.footer {
-    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
-    color: white;
-    padding: 20px 0;
-    margin-top: 40px;
-}
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      border: none;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: white;
+    }
 
-.footer a {
-    color: rgba(255, 255, 255, 0.8);
-}
+    .emotion-display {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+      color: white;
+      margin: 10px 0;
+    }
 
-.footer a:hover {
-    color: white;
-    text-decoration: none;
-}
+    button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+      color: white;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      background: black;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">Emotion-Based Music Player</div>
+
+  <div class="card">
+    <div class="emotion-display">Emotion: Neutral</div>
+
+    <button onclick="startCamera()">Start Camera</button>
+    <button onclick="stopCamera()">Stop Camera</button>
+
+    <br><br>
+    <video id="video" autoplay playsinline></video>
+  </div>
+
+  <script>
+    let stream;
+    const video = document.getElementById("video");
+
+    function startCamera() {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(s => {
+          stream = s;
+          video.srcObject = stream;
+        })
+        .catch(() => alert("Camera access denied"));
+    }
+
+    function stopCamera() {
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+        video.srcObject = null;
+      }
+    }
+  </script>
+
+</body>
+</html>
